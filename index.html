@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carnes en Nosara — cerdo, res y embutidos a domicilio</title>
+<meta name="description" content="Carne de cerdo y res fresca, con mucha rotación, entregada congelada a domicilio en Nosara. Pida por WhatsApp con un día de anticipación. Garantía de cambio.">
+<meta property="og:title" content="Carnes en Nosara">
+<meta property="og:description" content="Cerdo, res y embutidos a domicilio en Nosara. Calidad y economía. Pida por WhatsApp al 7071-2023.">
+<meta property="og:image" content="portada.jpg">
+<meta name="theme-color" content="#A3121A">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--rojo:#A3121A;--rojo2:#7E0B11;--crema:#FBF2DF;--crema2:#FFFBF1;--tinta:#1A1410;--tinta2:#5b4f45;--oro:#F2B705;--verde:#1f8a4c;--linea:#e8dcc4}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,system-ui,sans-serif;background:var(--crema);color:var(--tinta);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.env{max-width:1100px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+.display{font-family:Anton,Oswald,sans-serif;font-weight:400}
+
+/* barra */
+.barra{position:sticky;top:0;z-index:20;background:var(--rojo);color:#fff;box-shadow:0 2px 0 var(--rojo2)}
+.barra .env{display:flex;align-items:center;gap:12px;height:60px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca img{width:40px;height:40px;border-radius:8px;border:2px solid #fff}
+.marca b{font-family:Anton,sans-serif;font-weight:400;font-size:21px;letter-spacing:.02em;line-height:1}
+.marca small{display:block;font-family:Oswald;font-size:11px;letter-spacing:.14em;opacity:.85}
+.barra nav{margin-left:auto;display:flex;gap:18px;font-family:Oswald;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.barra nav a{text-decoration:none;opacity:.9}.barra nav a:hover{opacity:1;text-decoration:underline}
+@media(max-width:720px){.barra nav{display:none}}
+.wa{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#0b2e17;font-weight:700;border-radius:999px;padding:12px 20px;text-decoration:none;font-size:15px;border:0;cursor:pointer;font-family:inherit;white-space:nowrap}
+.wa svg{width:20px;height:20px;fill:currentColor}
+.wa:hover{filter:brightness(1.05)}
+.barra .wa{padding:8px 14px;font-size:14px}
+@media(max-width:720px){.barra .wa{margin-left:auto}}
+
+/* portada */
+.hero{background:var(--rojo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='20' height='20' fill='%23ffffff' fill-opacity='.04'/%3E%3Crect x='20' y='20' width='20' height='20' fill='%23ffffff' fill-opacity='.04'/%3E%3C/svg%3E");color:#fff;overflow:hidden}
+.hero .env{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding-top:44px;padding-bottom:52px}
+@media(max-width:820px){.hero .env{grid-template-columns:1fr;padding-top:28px;padding-bottom:36px}}
+.hero h1{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(42px,7vw,76px);line-height:.95}
+.hero h1 em{font-style:normal;color:var(--oro)}
+.hero p.lead{font-size:clamp(16px,2.2vw,19px);margin:16px 0 22px;max-width:30em;opacity:.95}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero .ctas .sec{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.mosaico{display:grid;grid-template-columns:1fr 1fr;gap:10px;transform:rotate(-2deg)}
+.mosaico img{border-radius:14px;border:4px solid #fff;aspect-ratio:1;object-fit:cover;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.mosaico img:nth-child(2){transform:translateY(18px)}.mosaico img:nth-child(3){transform:translateY(-8px)}
+@media(max-width:820px){.mosaico{grid-template-columns:repeat(4,1fr);transform:none}.mosaico img{border-width:3px}.mosaico img:nth-child(n){transform:none}}
+.sellos{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.sello{font-family:Oswald;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:999px}
+
+/* promo */
+.promo{background:var(--tinta);color:#fff}
+.promo .env{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+.promo b{font-family:Anton;font-weight:400;font-size:22px;color:var(--oro);letter-spacing:.02em}
+.promo span{font-size:15px}
+
+/* secciones */
+section{padding:56px 0;scroll-margin-top:60px}
+.tit{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.tit h2{font-family:Anton;font-weight:400;font-size:clamp(32px,5vw,46px);color:var(--rojo)}
+.tit p{color:var(--tinta2);max-width:34em}
+.estado{font-size:13px;color:var(--tinta2)}
+
+/* filtros */
+.filtros{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filtros button{font-family:Oswald;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:14px;border:2px solid var(--tinta);background:transparent;color:var(--tinta);border-radius:999px;padding:7px 16px;cursor:pointer}
+.filtros button.on{background:var(--tinta);color:var(--crema)}
+
+/* catálogo */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+@media(max-width:520px){.grid{grid-template-columns:1fr 1fr;gap:10px}}
+.prod{background:var(--crema2);border:1px solid var(--linea);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.prod .foto{aspect-ratio:1;background:var(--rojo2);position:relative;overflow:hidden}
+.prod .foto img{width:100%;height:100%;object-fit:cover}
+.prod .foto .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;font-family:Anton;font-size:22px;line-height:1.05;padding:16px;background:var(--rojo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='20' height='20' fill='%23ffffff' fill-opacity='.06'/%3E%3Crect x='20' y='20' width='20' height='20' fill='%23ffffff' fill-opacity='.06'/%3E%3C/svg%3E")}
+.cinta{position:absolute;top:10px;left:10px;font-family:Oswald;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.cinta.promo{background:var(--oro);color:var(--tinta)}
+.cinta.nuevo{background:#fff;color:var(--rojo)}
+.prod .info{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.prod h3{font-size:18px;font-weight:600;color:var(--tinta)}
+.prod .det{font-size:13px;color:var(--tinta2)}
+.prod .precio{margin-top:auto;padding-top:6px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.prod .precio b{font-family:Anton;font-weight:400;font-size:26px;color:var(--rojo);letter-spacing:.01em}
+.prod .precio s{color:var(--tinta2);font-size:14px}
+.prod .precio small{font-size:13px;color:var(--tinta2)}
+.prod .acc{display:flex;align-items:center;gap:6px;margin-top:8px}
+.prod .acc button{width:36px;height:36px;border-radius:10px;border:2px solid var(--tinta);background:#fff;font-size:20px;font-weight:700;cursor:pointer;line-height:1;color:var(--tinta)}
+.prod .acc .cant{min-width:56px;text-align:center;font-weight:700;font-size:15px}
+.prod .acc .add{flex:1;width:auto;font-family:Oswald;font-size:14px;letter-spacing:.05em;text-transform:uppercase;background:var(--tinta);color:var(--crema);border-color:var(--tinta)}
+.prod.agotado .foto img,.prod.agotado .foto .ph{filter:grayscale(1);opacity:.55}
+.prod.agotado .cinta.ago{background:var(--tinta);color:#fff}
+.prod.agotado .precio b{color:var(--tinta2)}
+.vacio{padding:28px;border:2px dashed var(--linea);border-radius:16px;text-align:center;color:var(--tinta2)}
+
+/* así trabajamos */
+.como{background:var(--crema2);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.pasos{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pasos{grid-template-columns:1fr}}
+.paso{background:#fff;border:1px solid var(--linea);border-radius:16px;padding:20px}
+.paso .n{width:44px;height:44px;border-radius:12px;background:var(--rojo);color:#fff;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.paso h3{font-size:19px;margin-bottom:6px}
+.paso p{font-size:14.5px;color:var(--tinta2)}
+.garantia{margin-top:22px;background:var(--rojo);color:#fff;border-radius:18px;padding:22px 24px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.garantia .escudo{font-size:40px}
+.garantia h3{font-family:Anton;font-weight:400;font-size:26px}
+.garantia p{opacity:.95;max-width:46em}
+
+/* consejos */
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.tips{grid-template-columns:1fr}}
+.tip{border-left:5px solid var(--rojo);background:var(--crema2);padding:16px 18px;border-radius:0 14px 14px 0}
+.tip h3{font-size:18px;margin-bottom:6px}
+.tip p,.tip li{font-size:14.5px;color:var(--tinta2)}
+.tip ul{padding-left:18px}
+
+/* preguntas */
+details.faq{background:var(--crema2);border:1px solid var(--linea);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+details.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+details.faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--rojo)}
+details.faq[open] summary::after{content:"–"}
+details.faq p{margin-top:8px;color:var(--tinta2)}
+
+/* pie */
+footer{background:var(--tinta);color:#e9dfcb;padding:40px 0 110px}
+footer .env{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px}
+@media(max-width:760px){footer .env{grid-template-columns:1fr}}
+footer h3{color:#fff;font-size:16px;margin-bottom:8px;letter-spacing:.08em}
+footer p,footer li{font-size:14px;opacity:.85;list-style:none}
+
+/* pedido flotante */
+.carrito{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:30;width:min(560px,calc(100% - 24px));background:var(--tinta);color:#fff;border-radius:18px;padding:10px 10px 10px 18px;display:none;align-items:center;gap:12px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.carrito.on{display:flex}
+.carrito .res{flex:1;min-width:0}
+.carrito .res b{display:block;font-family:Oswald;font-size:16px;letter-spacing:.03em}
+.carrito .res small{opacity:.75;font-size:12.5px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.carrito .vaciar{background:none;border:0;color:#fff;opacity:.7;cursor:pointer;font-size:13px;text-decoration:underline;font-family:inherit}
+.flota{position:fixed;right:16px;bottom:16px;z-index:25;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.flota svg{width:30px;height:30px;fill:#0b2e17}
+.carrito.on ~ .flota{display:none}
+:focus-visible{outline:3px solid var(--oro);outline-offset:2px}
+</style>
+</head>
+<body>
+<header class="barra"><div class="env">
+  <a class="marca" href="#"><img src="logo.png" alt="" width="40" height="40"><span><b>CARNES EN NOSARA</b><small>CERDO · RES · EMBUTIDOS</small></span></a>
+  <nav><a href="#productos">Productos</a><a href="#como">Así trabajamos</a><a href="#consejos">Consejos</a><a href="#preguntas">Preguntas</a></nav>
+  <a class="wa" data-wa href="#"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.4Z"/></svg>7071-2023</a>
+</div></header>
+
+<div class="hero"><div class="env">
+  <div>
+    <h1>Calidad y economía, <em>directo a su casa</em></h1>
+    <p class="lead">Carne de cerdo y res fresca, con mucha rotación, que se guarda y se entrega <b>congelada</b>. Pídala hoy por WhatsApp y se la llevamos mañana, sin costo de envío en Nosara.</p>
+    <div class="ctas"><a class="wa" data-wa href="#"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Pedir por WhatsApp</a><a class="sec" href="#productos">Ver precios de hoy</a></div>
+    <div class="sellos"><span class="sello">Fresca · mucha rotación</span><span class="sello">Entrega congelada</span><span class="sello">Garantía de cambio</span><span class="sello">Envío gratis en Nosara</span></div>
+  </div>
+  <div class="mosaico" aria-hidden="true"><img src="fotos/chuleta.webp" alt=""><img src="fotos/costilla-cerdo.webp" alt=""><img src="fotos/posta.webp" alt=""><img src="fotos/bistec.webp" alt=""></div>
+</div></div>
+
+<div class="promo" id="promoBar" hidden><div class="env"><b>🔥 PROMOCIÓN</b><span id="promoTxt"></span></div></div>
+
+<section id="productos"><div class="env">
+  <div class="tit"><div><h2>Precios de hoy</h2><p>Precios por kilo salvo que se indique. Elija lo que quiere y le armamos el mensaje de WhatsApp.</p></div><span class="estado" id="estado">Cargando precios…</span></div>
+  <div class="filtros" id="filtros" role="tablist"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="como" id="como"><div class="env">
+  <div class="tit"><h2>Así trabajamos</h2><p>Sin vueltas: usted pide, nosotros se lo llevamos.</p></div>
+  <div class="pasos">
+    <div class="paso"><div class="n display">1</div><h3>Pida por WhatsApp</h3><p>Escríbanos al 7071-2023 con <b>un día de anticipación</b>. Le confirmamos el pedido y el total.</p></div>
+    <div class="paso"><div class="n display">2</div><h3>Fresca, con rotación</h3><p>Movemos producto todas las semanas: no se queda guardado por semanas en bodega.</p></div>
+    <div class="paso"><div class="n display">3</div><h3>Llega congelada</h3><p>Se guarda y se entrega congelada, lista para pasar directo a su congelador.</p></div>
+    <div class="paso"><div class="n display">4</div><h3>Pague al recibir</h3><p>SINPE Móvil o efectivo contra entrega. El envío es sin costo en Nosara.</p></div>
+  </div>
+  <div class="garantia"><div class="escudo" aria-hidden="true">🛡️</div><div><h3>GARANTÍA: SI NO LE GUSTA, SE LO CAMBIAMOS</h3><p>Si algo no le parece, avísenos por WhatsApp y se lo cambiamos. Y si prefiere devolverlo, le devolvemos su dinero.</p></div></div>
+</div></section>
+
+<section id="consejos"><div class="env">
+  <div class="tit"><h2>Consejos de la casa</h2></div>
+  <div class="tips">
+    <div class="tip"><h3>Cómo descongelar</h3><ul><li><b>En la refri</b>, la noche antes: la mejor forma.</li><li><b>En agua fría</b>, en su bolsa cerrada, cambiando el agua cada 30 min.</li><li><b>Microondas</b> solo si la cocina de una vez.</li><li>Nunca sobre la mesa a temperatura ambiente.</li></ul></div>
+    <div class="tip"><h3>¿Cuánto compro?</h3><ul><li>Sin hueso (posta, trocitos, molida): 200–250 g por persona.</li><li>Con hueso (chuleta, costilla): 350–400 g por persona.</li><li>Sopa: 1 a 1,5 kg de hueso rinde 5–6 platos.</li></ul></div>
+    <div class="tip"><h3>Chuleta encebollada en 20 min</h3><p>Dore 1 kg de chuleta 4–5 min por lado, sofría 2 cebollas y ajo en el mismo sartén, vuelva la carne, tape 5 min y listo. Con arroz, frijoles y maduro.</p></div>
+  </div>
+</div></section>
+
+<section id="preguntas" style="padding-top:0"><div class="env">
+  <div class="tit"><h2>Preguntas frecuentes</h2></div>
+  <details class="faq"><summary>¿Con cuánto tiempo tengo que pedir?</summary><p>Con un día de anticipación. Lo que pida hoy por WhatsApp se lo llevamos mañana.</p></details>
+  <details class="faq"><summary>¿Cobran el envío?</summary><p>No. La entrega a domicilio en Nosara es sin costo.</p></details>
+  <details class="faq"><summary>¿Cómo pago?</summary><p>SINPE Móvil o efectivo, al recibir su pedido.</p></details>
+  <details class="faq"><summary>¿Por qué la carne llega congelada?</summary><p>Porque así se conserva mejor desde que sale hasta su casa. Movemos producto todas las semanas: es fresca, y congelada se mantiene así hasta que la cocine.</p></details>
+  <details class="faq"><summary>¿Y si algo no me gusta?</summary><p>Escríbanos. Se lo cambiamos, y si prefiere devolverlo, le devolvemos su dinero.</p></details>
+</div></section>
+
+<footer><div class="env">
+  <div><h3>CARNES EN NOSARA</h3><p>Cerdo, res y embutidos a domicilio en Nosara, Guanacaste. Calidad y economía.</p></div>
+  <div><h3>PEDIDOS</h3><ul><li>WhatsApp <a data-wa href="#">7071-2023</a></li><li>Con un día de anticipación</li><li>SINPE o efectivo contra entrega</li></ul></div>
+  <div><h3>SÍGANOS</h3><ul><li><a href="https://www.facebook.com/profile.php?id=61596905639478" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+</div></footer>
+
+<div class="carrito" id="carrito" role="region" aria-label="Su pedido"><div class="res"><b id="cTot"></b><small id="cDet"></small></div><button class="vaciar" id="cVaciar" type="button">Vaciar</button><a class="wa" id="cEnviar" href="#" target="_blank" rel="noopener">Enviar pedido</a></div>
+<a class="flota" data-wa href="#" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.4Z"/></svg></a>
+
+<script>
+/* Catálogo en vivo: lo escribe la app «Carnes en Nosara» en una hoja de Google pública (solo lectura). */
+const HOJA = '1D2h259TwEFyXOq2q7IyLTmUxWBltwpA-k7szdCWw3-A', TEL = '50670712023';
+const FOTOS = { 'posta-cerdo': 'posta', 'posta-cerdo-hueso': 'posta-hueso', 'chuleta-cerdo': 'chuleta', 'costilla-cerdo': 'costilla-cerdo', 'costilla-cerdo-trozos': 'costilla-cerdo', 'falda-cerdo': 'falda', 'costilla-res': 'costilla-res', 'bistec-res': 'bistec', 'molida-res': 'molida', 'hueso-sopa-res': 'hueso-sopa', 'hueso-pescuezo': 'pescuezo', 'higado': 'higado', 'bazo-rinon': 'bazo', 'salchichas': 'salchichas', 'salchichon': 'salchichon', 'chorizo-argentino': 'chorizo-argentino', 'chorizo-criollo': 'chorizo-criollo', 'chorizo-pollo': 'chorizo-pollo', 'chorizos': 'chorizo-criollo' };
+const NUEVOS = ['costilla-cerdo-rivet', 'trocitos-cerdo', 'trocitos-res'];
+const UNI = { 'kg': { c: 'kg', paso: 0.5, ini: 1 }, '½ kg': { c: 'paquete de ½ kg', paso: 1, ini: 1, n: 'paq.' }, 'unidad': { c: 'unidad', paso: 1, ini: 1, n: 'u.' } };
+let PRODS = [], FILTRO = 'Todo'; const PED = {};
+try { Object.assign(PED, JSON.parse(localStorage.getItem('cen-pedido') || '{}')); } catch (e) {}
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const money = n => '₡' + Math.round(n).toLocaleString('es-CR').replace(/\s/g, '.');
+const num = n => String(Math.round(n * 10) / 10).replace('.', ',');
+const waUrl = t => 'https://wa.me/' + TEL + '?text=' + encodeURIComponent(t);
+const uni = p => UNI[p.unidad] || UNI.kg;
+const precio = p => p.promo && p.promo < p.precio ? p.promo : p.precio;
+document.querySelectorAll('[data-wa]').forEach(a => { a.href = waUrl('¡Hola! Quiero hacer un pedido de Carnes en Nosara 🥩'); a.target = '_blank'; a.rel = 'noopener'; });
+
+function cargar() {
+  const cb = 'cen' + Date.now(), s = document.createElement('script');
+  const reloj = setTimeout(() => fallo(), 12000);
+  window[cb] = r => { clearTimeout(reloj); delete window[cb]; s.remove(); try { leer(r); } catch (e) { fallo(); } };
+  s.src = 'https://docs.google.com/spreadsheets/d/' + HOJA + '/gviz/tq?sheet=catalogo&headers=1&tqx=responseHandler:' + cb + '&_=' + Date.now();
+  s.onerror = () => { clearTimeout(reloj); fallo(); };
+  document.head.appendChild(s);
+}
+function leer(r) {
+  if (!r || r.status === 'error') throw 0;
+  const cols = r.table.cols.map(c => c.label), filas = r.table.rows.map(x => { const o = {}; x.c.forEach((c, i) => o[cols[i]] = c ? c.v : null); return o; });
+  const act = filas.map(o => o.actualizado).find(Boolean);
+  PRODS = filas.filter(o => o.id && o.nombre && o.precio > 0).map(o => ({ id: String(o.id), nombre: String(o.nombre), cat: o.categoria || 'Otros', unidad: o.unidad || 'kg', precio: Number(o.precio), promo: Number(o.precioPromo) || 0, hasta: o.promoHasta || '', agotado: o.estado === 'agotado', detalle: o.detalle || '', nota: o.notaPromo || '', orden: Number(o.orden) || 0 }));
+  Object.keys(PED).forEach(id => { const p = PRODS.find(x => x.id === id); if (!p || p.agotado) delete PED[id]; });
+  $('#estado').textContent = act ? 'Actualizado ' + new Date(act).toLocaleString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit' }) : '';
+  pintarPromo(); pintarFiltros(); pintar(); pintarCarrito();
+}
+function fallo() { $('#estado').textContent = ''; $('#grid').innerHTML = '<div class="vacio" style="grid-column:1/-1">No pudimos cargar los precios en este momento. <a data-wa href="' + esc(waUrl('¡Hola! ¿Me pasa la lista de precios de hoy?')) + '" target="_blank" rel="noopener"><b>Pídanos la lista por WhatsApp</b></a>.</div>'; }
+function pintarPromo() {
+  const ps = PRODS.filter(p => p.promo && p.promo < p.precio && !p.agotado);
+  $('#promoBar').hidden = !ps.length;
+  $('#promoTxt').textContent = ps.map(p => p.nombre + ' a ' + money(p.promo) + '/' + uni(p).c + ' (antes ' + money(p.precio) + ')').join(' · ') + ' — por tiempo limitado.';
+}
+function pintarFiltros() {
+  const cats = ['Todo'].concat([...new Set(PRODS.map(p => p.cat))]);
+  if (PRODS.some(p => p.promo && !p.agotado)) cats.splice(1, 0, 'Promoción');
+  if (!cats.includes(FILTRO)) FILTRO = 'Todo';
+  $('#filtros').innerHTML = cats.map(c => '<button type="button" role="tab" aria-selected="' + (c === FILTRO) + '" class="' + (c === FILTRO ? 'on' : '') + '" data-f="' + esc(c) + '">' + esc(c) + '</button>').join('');
+}
+function pintar() {
+  let ps = PRODS.slice();
+  if (FILTRO === 'Promoción') ps = ps.filter(p => p.promo && p.promo < p.precio && !p.agotado);
+  else if (FILTRO !== 'Todo') ps = ps.filter(p => p.cat === FILTRO);
+  ps.sort((a, b) => (a.agotado - b.agotado) || (!!(b.promo && b.promo < b.precio) - !!(a.promo && a.promo < a.precio)) || 0);
+  $('#grid').innerHTML = ps.length ? ps.map(tarjeta).join('') : '<div class="vacio" style="grid-column:1/-1">Nada en esta sección por ahora.</div>';
+}
+function tarjeta(p) {
+  const u = uni(p), f = FOTOS[p.id], enPromo = p.promo && p.promo < p.precio, q = PED[p.id] || 0;
+  const foto = f ? '<img src="fotos/' + f + '.webp" alt="' + esc(p.nombre) + '" loading="lazy" width="560" height="560">' : '<div class="ph">' + esc(p.nombre) + '</div>';
+  const cinta = p.agotado ? '<span class="cinta ago">Agotado por ahora</span>' : enPromo ? '<span class="cinta promo">🔥 Promo</span>' : NUEVOS.includes(p.id) ? '<span class="cinta nuevo">¡Nuevo!</span>' : '';
+  const acc = p.agotado ? '<div class="acc"><span class="det">Vuelve pronto. Pregunte por WhatsApp.</span></div>'
+    : q ? '<div class="acc"><button type="button" data-m="-1" data-id="' + esc(p.id) + '" aria-label="Menos ' + esc(p.nombre) + '">−</button><span class="cant">' + esc(num(q)) + ' ' + esc(u.n || 'kg') + '</span><button type="button" data-m="1" data-id="' + esc(p.id) + '" aria-label="Más ' + esc(p.nombre) + '">+</button></div>'
+    : '<div class="acc"><button type="button" class="add" data-m="1" data-id="' + esc(p.id) + '">Agregar</button></div>';
+  return '<article class="prod' + (p.agotado ? ' agotado' : '') + '"><div class="foto">' + foto + cinta + '</div><div class="info"><h3>' + esc(p.nombre) + '</h3>' + (p.detalle ? '<div class="det">' + esc(p.detalle) + '</div>' : '') + (enPromo && p.nota ? '<div class="det">' + esc(p.nota) + '</div>' : '') +
+    '<div class="precio"><b>' + money(precio(p)) + '</b>' + (enPromo ? '<s>' + money(p.precio) + '</s>' : '') + '<small>/ ' + esc(u.c) + '</small></div>' + acc + '</div></article>';
+}
+function total() { return Object.entries(PED).reduce((s, [id, q]) => { const p = PRODS.find(x => x.id === id); return s + (p ? precio(p) * q : 0); }, 0); }
+function textoPedido() {
+  const ls = Object.entries(PED).map(([id, q]) => { const p = PRODS.find(x => x.id === id); return p ? '• ' + num(q) + ' ' + (uni(p).n || 'kg') + ' ' + p.nombre + ' — ' + money(precio(p) * q) : ''; }).filter(Boolean);
+  return '¡Hola! Quiero hacer este pedido de Carnes en Nosara:\n' + ls.join('\n') + '\nTotal aproximado: ' + money(total()) + ' (se ajusta al peso real)\n\nNombre:\nDirección o zona en Nosara:\n¿Para qué día?:';
+}
+function pintarCarrito() {
+  const ids = Object.keys(PED); $('#carrito').classList.toggle('on', ids.length > 0);
+  try { localStorage.setItem('cen-pedido', JSON.stringify(PED)); } catch (e) {}
+  if (!ids.length) return;
+  $('#cTot').textContent = ids.length + (ids.length === 1 ? ' producto' : ' productos') + ' · ' + money(total());
+  $('#cDet').textContent = ids.map(id => { const p = PRODS.find(x => x.id === id); return p ? num(PED[id]) + ' ' + (uni(p).n || 'kg') + ' ' + p.nombre : ''; }).filter(Boolean).join(', ');
+  $('#cEnviar').href = waUrl(textoPedido());
+}
+document.addEventListener('click', e => {
+  const f = e.target.closest('[data-f]'); if (f) { FILTRO = f.dataset.f; pintarFiltros(); pintar(); return; }
+  const m = e.target.closest('[data-m]'); if (m) {
+    const p = PRODS.find(x => x.id === m.dataset.id); if (!p || p.agotado) return; const u = uni(p), d = Number(m.dataset.m);
+    const q = PED[p.id] || 0, n = q ? Math.round((q + d * u.paso) * 10) / 10 : u.ini; if (n <= 0) delete PED[p.id]; else PED[p.id] = n;
+    pintar(); pintarCarrito(); return;
+  }
+  if (e.target.closest('#cVaciar')) { Object.keys(PED).forEach(k => delete PED[k]); pintar(); pintarCarrito(); }
+});
+cargar();
+</script>
+</body>
+</html>
