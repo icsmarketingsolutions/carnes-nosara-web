@@ -12,6 +12,19 @@
 <meta property="og:image" content="https://carnesnosara.com/portada.jpg">
 <meta name="theme-color" content="#A3121A">
 <link rel="icon" href="favicon.png">
+<!-- Medición: Pixel de Meta + Google Analytics 4 -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1634061715402598');fbq('track','PageView');
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-D9BP3FV8KZ');
+window.medir=function(ev,d){try{d=d||{};
+ if(ev==='agregar'){fbq('track','AddToCart',{content_ids:[d.id],content_name:d.nombre,content_type:'product',value:d.valor||0,currency:'CRC'});gtag('event','add_to_cart',{currency:'CRC',value:d.valor||0,items:[{item_id:d.id,item_name:d.nombre}]});}
+ else if(ev==='pedido'){fbq('track','Lead',{value:d.valor||0,currency:'CRC',num_items:d.n||0,content_ids:d.ids||[]});gtag('event','generate_lead',{currency:'CRC',value:d.valor||0,items:(d.ids||[]).map(function(i){return{item_id:i};})});}
+ else if(ev==='contacto'){fbq('track','Contact');gtag('event','contact',{method:'whatsapp'});}
+}catch(e){}};
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9BP3FV8KZ"></script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1634061715402598&ev=PageView&noscript=1"></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -294,8 +307,11 @@ document.addEventListener('click', e => {
   const m = e.target.closest('[data-m]'); if (m) {
     const p = PRODS.find(x => x.id === m.dataset.id); if (!p || p.agotado) return; const u = uni(p), d = Number(m.dataset.m);
     const q = PED[p.id] || 0, n = q ? Math.round((q + d * u.paso) * 10) / 10 : u.ini; if (n <= 0) delete PED[p.id]; else PED[p.id] = n;
+    if (d > 0 && !q) medir('agregar', { id: p.id, nombre: p.nombre, valor: precio(p) * u.ini });
     pintar(); pintarCarrito(); return;
   }
+  if (e.target.closest('#cEnviar')) { medir('pedido', { valor: total(), n: Object.keys(PED).length, ids: Object.keys(PED) }); return; }
+  if (e.target.closest('[data-wa]')) { medir('contacto'); return; }
   if (e.target.closest('#cVaciar')) { Object.keys(PED).forEach(k => delete PED[k]); pintar(); pintarCarrito(); }
 });
 cargar();
